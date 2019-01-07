@@ -5,19 +5,39 @@
   "rules": {
     "strict": 0,
     "arrow-body-style": 0,
-    "no-unused-expressions": ["error", { "allowTernary": true }],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTernary": true
+      }
+    ],
     "no-console": 0,
+    no-shadow: ["error", { "builtinGlobals": false, "hoist": "never", "allow": []}],
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "indent": ["error", 4],
-    "linebreak-style": [ "error", "unix" ],
-    "quotes": [ "error", "backtick" ],
-    "semi": [ "error", "never" ],
+    "indent": [
+      "error",
+      4
+    ],
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "quotes": [
+      "error",
+      "backtick"
+    ],
+    "semi": [
+      "error"
+    ],
     "spaced-comment": 0,
     "max-len": 0,
     "camelcase": 0,
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
     "object-curly-spacing": 0,
     "no-nested-ternary": 0
-    }
+  }
 }

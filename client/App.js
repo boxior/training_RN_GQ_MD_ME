@@ -1,27 +1,27 @@
-import React, {Component} from 'react'
-import {Platform, StyleSheet, Text, View, YellowBox} from 'react-native'
-import "react-devtools"
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View, YellowBox} from 'react-native';
+import "react-devtools";
 //for devtools
-YellowBox.ignoreWarnings([`Warning: ...`])
+YellowBox.ignoreWarnings([`Warning: ...`]);
 
 const instructions = Platform.select({
     ios: `Press Cmd+R to reload, Cmd+D or shake for dev menu`,
     android:
     `Double tap R on your keyboard to reload,\n` +
     `Shake or press menu button for dev menu`
-})
+});
 
 type Props = {};
 export default class App extends Component<Props> {
     render() {
-        console.log(`dsr`, styles.container.backgroundColor)
+        console.log(`dsr`, styles.container.backgroundColor);
 
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>My first App</Text>
                 <Text style={styles.instructions}>Will be here</Text>
             </View>
-        )
+        );
     }
 }
 
@@ -43,5 +43,5 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         color: `pink`
     }
-})
+});
 
