@@ -1,14 +1,16 @@
 const graphql = require(`graphql`);
-const {user} = require(`./user`);
-const {like} = require(`./like`);
+const userQueries = require(`./user`);
+const likeQueries = require(`./like`);
+const matchQueries = require(`./match`);
 
 const {GraphQLObjectType} = graphql;
 
 const Queries = new GraphQLObjectType({
     name: `Queries`,
     fields: {
-        user,
-        like
+        ...userQueries,
+        ...likeQueries,
+        ...matchQueries
     }
 });
 

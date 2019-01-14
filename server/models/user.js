@@ -6,7 +6,28 @@ const userSchema = new Schema({
     password: String,
     name: String,
     age: Number,
-    gender: String
-});
+    gender: String,
+    showMe: String,
+    distance: {
+        unit: String,
+        max: Number
+    },
+    ageRange: {
+        min: Number,
+        max: Number
+    },
+    myLikes: {
+        type: Schema.ObjectId,
+        ref: `Like`
+    },
+    meLikes: {
+        type: Schema.ObjectId,
+        ref: `Like`
+    },
+    matches: {
+        type: Schema.ObjectId,
+        ref: `Match`
+    }
+}, {timestamps: true});
 
 module.exports = mongoose.model(`User`, userSchema);
