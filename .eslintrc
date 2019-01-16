@@ -12,7 +12,7 @@
       }
     ],
     "no-console": 0,
-    no-shadow: ["error", { "builtinGlobals": false, "hoist": "never", "allow": []}],
+    "no-shadow": ["error", { "builtinGlobals": false, "hoist": "never", "allow": []}],
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "indent": [
