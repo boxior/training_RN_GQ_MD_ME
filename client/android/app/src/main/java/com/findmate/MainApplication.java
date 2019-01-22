@@ -1,4 +1,4 @@
-package com.reactnative_androidstudio;
+package com.findmate;
 
 import android.app.Application;
 

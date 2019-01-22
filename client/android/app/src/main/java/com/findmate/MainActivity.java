@@ -1,4 +1,4 @@
-package com.reactnative_androidstudio;
+package com.findmate;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "ReactNative_AndroidStudio";
+        return "FindMate";
     }
 }
