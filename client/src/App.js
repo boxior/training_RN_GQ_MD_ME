@@ -7,12 +7,11 @@ YellowBox.ignoreWarnings([`Warning: ...`]);
 const instructions = Platform.select({
     ios: `Press Cmd+R to reload, Cmd+D or shake for dev menu`,
     android:
-    `Double tap R on your keyboard to reload,\n` +
-    `Shake or press menu button for dev menu`
+        `Double tap R on your keyboard to reload,\n` +
+        `Shake or press menu button for dev menu`
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
     render() {
         console.log(`dsr`, styles.container.backgroundColor);
 
@@ -27,21 +26,21 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: `center`,
         alignItems: `center`,
-        backgroundColor: `blue`
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: `center`,
-        margin: 10,
-        color: `red`
+        backgroundColor: `blue`,
+        flex: 1,
+        justifyContent: `center`
     },
     instructions: {
-        textAlign: `center`,
         marginBottom: 5,
-        color: `pink`
+        color: `pink`,
+        textAlign: `center`
+    },
+    welcome: {
+        color: `red`,
+        fontSize: 20,
+        margin: 10,
+        textAlign: `center`
     }
 });
 

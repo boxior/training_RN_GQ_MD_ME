@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "eslint": "^5.7.0",
-    "eslint-config-equimper": "^2.2.2"
+    "babel-eslint": "^10.0.2",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-native": "^3.7.0"
   },
   "dependencies": {
-    "global": "^4.3.2",
-    "react-native-rename": "^2.4.0"
+    "eslint": "^6.2.0"
   }
 }

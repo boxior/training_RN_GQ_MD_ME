@@ -1,43 +1,64 @@
-/* yarn add -D eslint-config-equimper */
-
 {
-  "extends": "equimper",
-  "rules": {
-    "strict": 0,
-    "arrow-body-style": 0,
-    "no-unused-expressions": [
-      "error",
+  "env": {
+    "react-native/react-native": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      // Regex for Component Factory to use,
+      // default to "createReactClass"
+      "pragma": "React",
+      // Pragma to use, default to "React"
+      "version": "detect",
+      // React version. "detect" automatically picks the version you have installed.
+      // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+      // default to latest and warns if missing
+      // It will default to "detect" in the future
+      "flowVersion": "0.53"
+      // Flow version
+    },
+    "propWrapperFunctions": [
+      // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
+      "forbidExtraProps",
       {
-        "allowTernary": true
+        "property": "freeze",
+        "object": "Object"
+      },
+      {
+        "property": "myFavoriteWrapper"
       }
     ],
-    "no-console": 0,
-    "no-shadow": ["error", { "builtinGlobals": false, "hoist": "never", "allow": []}],
+    "linkComponents": [
+      // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
+      "Hyperlink",
+      {
+        "name": "Link",
+        "linkAttribute": "to"
+      }
+    ]
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-native/all"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-inline-styles": 2,
+    "react-native/no-color-literals": 2,
+    "react-native/no-raw-text": 2,
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
-    "indent": [
-      "error",
-      4
-    ],
-    "linebreak-style": [
-      "error",
-      "windows"
-    ],
-    "quotes": [
-      "error",
-      "backtick"
-    ],
-    "semi": [
-      "error"
-    ],
-    "spaced-comment": 0,
-    "max-len": 0,
-    "camelcase": 0,
-    "comma-dangle": [
-      "error",
-      "never"
-    ],
-    "object-curly-spacing": 0,
-    "no-nested-ternary": 0
+    "react/jsx-uses-vars": "error"
   }
 }
